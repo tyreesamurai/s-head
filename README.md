@@ -1,4 +1,4 @@
-# 🃏 Shithead
+# 🃏 S***head
 
 ## 📌 Overview
 A turn-based multiplayer card game designed to be played with friends online. Built from the ground up using WebSockets for real-time interaction and custom game logic. This project is focused on implementing game state synchronization, connection handling, and a polished, cross-platform user interface.
