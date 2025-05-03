@@ -57,22 +57,22 @@ Designs will be uploaded as they are completed:
 - [ ] Handle edge cases like disconnections, forfeits
 
 ### 🖧 Backend (Go)
-- [ ] Set up Gorilla WebSocket server
-- [ ] Implement join/create room functionality
-- [ ] Create match state and player state structs
-- [ ] Handle broadcast, receive, and update logic
+- [x] Set up Gorilla WebSocket server
+- [x] Implement join/create room functionality
+- [x] Create match state and player state structs
+- [x] Handle broadcast, receive, and update logic
 
 ### 📱 Frontend (React Native)
-- [ ] Build lobby/join screen
+- [x] Build lobby/join screen
 - [ ] Implement game screen with card layout
 - [ ] Add user feedback (e.g., turn alerts, animations)
 
 ### 🧪 Testing
-- [ ] Unit tests for game logic
-- [ ] Integration tests for WebSocket flow
+- [x] Unit tests for game logic
+- [x] Integration tests for WebSocket flow
 - [ ] Manual testing with multiple device emulators
 
-### 🚀 Deployment (Optional)
+### 🚀 Deployment
 - [ ] Dockerize backend
 - [ ] Explore Render or Fly.io for hosting
 - [ ] Set up GitHub Actions for CI
