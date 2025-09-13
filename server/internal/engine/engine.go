@@ -100,10 +100,19 @@ func (e *Engine) Run() {
 
 	// TODO: Implement game loop
 
-	startingPlayer := e.FindStartingPlayer()
-	e.SetCurrentPlayer(startingPlayer)
+	e.SetCurrentPlayer(e.FindStartingPlayer())
+
+	e.WaitForPlayerAction()
+
+	e.ValidatePlayerAction()
 
 	e.NextPlayer()
+}
+
+func (e *Engine) WaitForPlayerAction() {
+}
+
+func (e *Engine) ValidatePlayerAction() {
 }
 
 func (e *Engine) DrawCards(count int) []Card {
