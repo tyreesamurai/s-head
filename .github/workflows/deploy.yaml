@@ -15,13 +15,13 @@ jobs:
         svc:
           - {
               image: "tyreesamurai/shithead-web",
-              context: "s-head-client",
-              dockerfile: "../../client/Dockerfile",
+              context: "client",
+              dockerfile: "Dockerfile",
             }
           - {
               image: "tyreesamurai/shithead-api",
-              context: "s-head-server",
-              dockerfile: "../../server/Dockerfile",
+              context: "server",
+              dockerfile: "Dockerfile",
             }
     uses: tyreesamurai/ci-templates/.github/workflows/deploy.yml@main
     with:
