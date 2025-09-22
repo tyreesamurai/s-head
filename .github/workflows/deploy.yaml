@@ -20,5 +20,4 @@ jobs:
       image_name: ${{ matrix.svc.image }}
       service_dir: /srv/apps/shithead
       context: ${{ matrix.svc.context }}
-      dockerfile: ${{ matrix.svc.dockerfile }}
     secrets: inherit
