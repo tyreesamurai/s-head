@@ -13,16 +13,8 @@ jobs:
       fail-fast: false
       matrix:
         svc:
-          - {
-              image: "tyreesamurai/shithead-web",
-              context: "client",
-              dockerfile: "Dockerfile",
-            }
-          - {
-              image: "tyreesamurai/shithead-api",
-              context: "server",
-              dockerfile: "Dockerfile",
-            }
+          - { image: "tyreesamurai/shithead-web", context: "client" }
+          - { image: "tyreesamurai/shithead-api", context: "server" }
     uses: tyreesamurai/ci-templates/.github/workflows/deploy.yml@main
     with:
       image_name: ${{ matrix.svc.image }}
