@@ -1,0 +1,32 @@
+name: build-and-deploy
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  services:
+    strategy:
+      fail-fast: false
+      matrix:
+        svc:
+          - {
+              image: "tyreesamurai/shithead-web",
+              context: "shithead-client",
+              dockerfile: "client/Dockerfile",
+            }
+          - {
+              image: "tyreesamurai/shithead-api",
+              context: "shithead-server",
+              dockerfile: "server/Dockerfile",
+            }
+    uses: tyreesamurai/ci-templates/.github/workflows/deploy.yml@main
+    with:
+      image_name: ${{ matrix.svc.image }}
+      service_dir: /srv/apps/shithead
+      context: ${{ matrix.svc.context }}
+      dockerfile: ${{ matrix.svc.dockerfile }}
+    secrets: inherit
